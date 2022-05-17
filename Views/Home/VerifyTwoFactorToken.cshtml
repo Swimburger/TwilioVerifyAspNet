@@ -1,0 +1,16 @@
+﻿@model VerifyTwoFactorViewModel
+
+@if (Model.Status == null || Model.Status == "pending")
+{
+    <form asp-controller="Home" asp-action="VerifyTwoFactorToken">
+        <input type="hidden" asp-for="VerificationSid" />
+    
+        <label for="code">Code</label> <br>
+        <input id="code" asp-for="Code"/> <br>
+        <button type="submit">Submit</button>
+    </form>
+}
+else if (Model.Status == "cancelled")
+{
+    <text>Your 2FA verification has been cancelled</text>
+}

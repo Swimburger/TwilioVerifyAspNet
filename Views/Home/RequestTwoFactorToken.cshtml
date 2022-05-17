@@ -1,0 +1,7 @@
+﻿@model RequestTwoFactorViewModel
+
+<form asp-controller="Home" asp-action="RequestTwoFactorToken">
+    <label for="phone-number">Phone Number</label> <br>
+    <input id="phone-number" asp-for="PhoneNumber"/> <br>
+    <button type="submit">Submit</button>
+</form>
